@@ -10,3 +10,6 @@ CancellationTokenSource cts = new CancellationTokenSource();
 var conversion = await FFmpeg.Conversions.FromSnippet.ExtractAudio(videoFilePath, audioFilePath);
 
 await conversion.Start(cts.Token);
+
+Console.WriteLine("Conversion completed");
+Console.WriteLine(audioFilePath);
